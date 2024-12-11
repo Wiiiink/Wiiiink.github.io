@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="guestbook.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="home.html">首页</a>
+            <a href="album.html">相册</a>
+            <a href="blog.html">日志</a>
+            <a href="guestbook.html" class="active">留言板</a>
+        </nav>
+
+        <div class="guestbook-container">
+            <div class="message-form">
+                <h3>写留言</h3>
+                <div class="form-group">
+                    <input type="text" id="visitorName" placeholder="你的昵称（选填）" class="visitor-input">
+                </div>
+                <div class="form-group">
+                    <textarea id="messageContent" placeholder="说点什么吧..." class="message-textarea"></textarea>
+                </div>
+                <div class="form-footer">
+                    <span class="char-count">0/200</span>
+                    <button id="submitMessage" class="submit-btn">发表留言</button>
+                </div>
+            </div>
+
+            <div class="message-list">
+                <!-- 留言内容将通过JavaScript动态加载 -->
+            </div>
+
+            <!-- 删除确认模态框 -->
+            <div id="confirmModal" class="confirm-modal">
+                <div class="confirm-content">
+                    <h3>确认删除</h3>
+                    <p>确定要删除这条留言吗？此操作不可恢复。</p>
+                    <div class="confirm-buttons">
+                        <button id="confirmDelete" class="confirm-delete">确定删除</button>
+                        <button id="confirmCancel" class="confirm-cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="navigation.js"></script>
+    <script src="guestbook.js"></script>
+</body>
+</html> 

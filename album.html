@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的相册</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="album.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="home.html">首页</a>
+            <a href="album.html" class="active">相册</a>
+            <a href="blog.html">日志</a>
+            <a href="guestbook.html">留言板</a>
+        </nav>
+
+        <div class="album-container">
+            <div class="album-header">
+                <h2>我的相册集</h2>
+                <div class="album-controls">
+                    <input type="file" id="photoInput" accept="image/*" multiple style="display: none;">
+                    <button id="uploadBtn" class="upload-btn">上传照片</button>
+                </div>
+            </div>
+
+            <div class="album-grid">
+                <!-- 相册内容将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+    <script src="navigation.js"></script>
+    <script src="album.js"></script>
+</body>
+</html> 
